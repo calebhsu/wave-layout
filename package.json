@@ -1,0 +1,22 @@
+{
+  "name": "wave-layout",
+  "version": "1.0.0",
+  "description": "Parameterized wave layout for CraftML",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/calebhsu/wave-layout.git"
+  },
+  "keywords": [
+    "craftml"
+  ],
+  "author": "Caleb Hsu",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/calebhsu/wave-layout/issues"
+  },
+  "homepage": "https://github.com/calebhsu/wave-layout"
+}
