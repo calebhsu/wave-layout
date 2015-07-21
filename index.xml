@@ -1,35 +1,29 @@
 <craft name="wave-layout">
     <parameter name="height" type="int" default="20"/>
     <parameter name="spacing" type="float" default="0"/>
-    <g>
-        <content></content>
-    </g>
+    <content>
+        <repeat n="10">
+            <cube></cube>
+        </repeat>
+    </content>
     <script>
+        var contentSolids = scope.solids
 
-        function main(params, scope){
-
-            var contentSolids = scope.solids[0].children
-
-            var tx = 0, ty = 0
-            var r = params.height, theta = 0
-            var delta = 2 * Math.PI / 10
+        var tx = 0, ty = 0
+        var r = params.height, theta = 0
+        var delta = 2 * Math.PI / 10
+        
+        contentSolids.forEach(function(solid){
+            tx = tx + solid.layout.size.x + params.spacing
+            ty = (r * Math.sin(theta)) + solid.layout.size.y
             
-            contentSolids.forEach(function(solid){
-                tx = tx + solid.layout.size.x + params.spacing
-                ty = (r * Math.sin(theta)) + solid.layout.size.y
-                
-                solid.translateTo({
-                    x: tx,
-                    y: ty, 
-                    z: solid.layout.location.z
-                })
-                
-                theta = theta + delta
+            solid.translateTo({
+                x: tx,
+                y: ty, 
+                z: solid.layout.position.z
             })
-
-            scope.solids[0].fitToChildren()
-
-        }
-
+            
+            theta = theta + delta
+        })
     </script>
 </craft>

@@ -1,8 +1,13 @@
 # wave-layout
 Wave layout for CraftML
 
-### Install
-    $ npm install wave-layout
+### Usage
+```html
+<craft>
+    <craft name="wave-layout" module="wave-layout"/>
+    <wave-layout></wave-layout>
+</craft>
+```
 
 ### Parameters
 - height: adjusts wave height

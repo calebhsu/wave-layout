@@ -1,6 +1,6 @@
 {
   "name": "wave-layout",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Parameterized wave layout for CraftML",
   "main": "index.js",
   "scripts": {
